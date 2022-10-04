@@ -15,7 +15,7 @@
               </path>
             </svg>
           </a>
-          <h3>Study Room</h3>
+          <h3>Campaig Posts</h3>
         </div>
         {% if room.host == request.user %}
         <div class="room__topRight">
@@ -57,7 +57,7 @@
             <span>{{room.created|timesince}} ago</span>
           </div>
           <div class="room__hosted">
-            <p>Hosted By</p>
+            <p>Posted By</p>
             <a href="{% url 'user-profile' room.host.id %}" class="room__author">
               <div class="avatar avatar--small">
                 <img src="{{room.host.avatar.url}}" />
@@ -123,7 +123,7 @@
 
     <!--   Start -->
     <div class="participants">
-      <h3 class="participants__top">Participants <span>({{participants.count}} Joined)</span></h3>
+      <h3 class="participants__top">Participants <span>({{participants.count}} Reviewed)</span></h3>
       <div class="participants__list scroll">
         {% for user in participants %}
         <a href="{%  url 'user-profile' user.id %}" class="participant">

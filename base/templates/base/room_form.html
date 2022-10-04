@@ -14,7 +14,7 @@
               </path>
             </svg>
           </a>
-          <h3>Create/Update Study Room</h3>
+          <h3>Create/Update Post</h3>
         </div>
       </div>
       <div class="layout__body">
@@ -22,7 +22,7 @@
           {% csrf_token %}
 
           <div class="form__group">
-            <label for="room_topic">Enter a Topic</label>
+            <label for="room_topic">Enter a Post</label>
             <input required type="text" value="{{room.topic.name}}" name="topic" list="topic-list" />
             <datalist id="topic-list">
               <select id="room_topic">
@@ -35,12 +35,12 @@
 
 
           <div class="form__group">
-            <label for="room_name">Room Name</label>
+            <label for="room_name">Post Name</label>
             {{form.name}}
           </div>
 
           <div class="form__group">
-            <label for="room_description">Room Description</label>
+            <label for="room_description">Post Description</label>
             {{form.description}}
           </div>
 
